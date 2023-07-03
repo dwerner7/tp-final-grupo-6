@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    background-color: #a393eb; 
+    font-weight:bold;
+}
+
+form{
+    background-color: #352f44; 
+    margin:10px auto ; 
+    width: 400px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input{
+    border: solid 2px black;
+    padding-left: 10px;
+}
+
+.border-radius-10{
+    border-radius: 10px;
+}
+
+
+label{
+    font-weight: bold;
+}
+
+.margin-left-10{
+    margin-left: 10px;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+
+.btn-cancelar{
+    margin-left: 170px;
+}
+
+.portada-libro{
+    display: block;
+    /* align-self: center; */
+}
+
+.fondo-negro{
+    background-color: black;
+}
+
+.btn-dark-purple{
+    /* background-color:darkslateblue; */
+    background-color:#312a53;
+    /* color: white; */
+    border: #312a53 solid 1px;
+}
+
+.btn-black{
+    background-color: black;
+    /* color: white; */
+    border: black solid 1px;
+    text-decoration: none;
+}
+
+/* thead{
+    background-color: #a393eb;
+} */
+
+.bold{
+    font-weight: bold;
+}
+
+.light-purple-text{
+    color: #a393eb;
+}
+
+.boton{
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* .purple-border{
+    border: #a393eb solid 1px;
+} */
+
+img{
+    width:100px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.btn-ingresar{
+    background-color:#a393eb;
+    border: #312a53 solid 4px;
+    color: black;
+    font-weight: bold;
+    font-size:x-large;
+    padding: 12px;
+    margin: 50%; /*25%*/
+    
+}
+
+
+/***********************CARDS***************************/
+
+.container-libros{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    padding: 20px;
+    row-gap: 10px;
+    
+}
+.libro {
+    line-height: 25px;
+    /* background-color: white; */
+    background-color: rgb(39, 39, 44);
+    width: 180px;
+    /* min-height: 400px;
+    max-height: 600px; */
+    color: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    padding: 24px;
+    margin: 8px;
+    border-radius: 4px;
+    border: #a393eb solid 2px;
+    transition: background-color .5s; 
+
+    animation: librosGrow 1.5s;
+}
+
+
+.libro:hover {
+    background-color: #312a53;
+    
+    border: rgb(39, 39, 44) solid 2px;
+    transform: scale(110%,110%);
+    
+}
+
+
+
+.autor-libro{
+    /* color: darkslateblue; */
+    color: #a393eb;
+    
+}
+
+.info-padding{
+    padding: 5px 5px 0 5px;
+}
+
+.libro img {
+    align-self: center;
+    width: 128px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+
+
+/*BREAKPOINTS*/
+
+
+@media(min-width:600px) {
+    .container-libros{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(min-width:900px) {
+    .container-libros{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+ @media(min-width:1200px) {
+    .container-libros{
+        grid-template-columns: repeat(5,1fr);
+    }
+} 
