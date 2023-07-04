@@ -12,7 +12,6 @@ createApp({
             precio: 0,
             stock: 0,
             imagen: "",
-            // url: 'http://promero.pythonanywhere.com/productos/' + id,
             // url: 'http://localhost:5000/productos/' + id,
             url: 'https://daiw77.pythonanywhere.com/productos/' + id,
         }
@@ -56,6 +55,7 @@ createApp({
                 .then(function () {
                     alert("Registro modificado")
                     window.location.href = "../templates/productos.html";
+                    // window.location.href = "index.html";
                 })
                 .catch(err => {
                     console.error(err);

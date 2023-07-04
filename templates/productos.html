@@ -20,6 +20,7 @@
             <h1>Libros</h1>
             <br>
             <a class="boton btn-dark-purple text-white" href="../templates/producto_nuevo.html">Nuevo</a>
+            <!-- <a class="boton btn-dark-purple text-white" href="producto_nuevo.html">Nuevo</a> -->
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos :( , por favor actualice la página </p>
@@ -59,6 +60,9 @@
                            
                                         <a class="boton btn-dark-purple text-white"
                                             :href="'./producto_update.html?id='+ producto.id">Editar</a>
+
+                                            <!-- <a class="boton btn-dark-purple text-white"
+                                            :href="'./producto_update.html?id='+ producto.id">Editar</a> -->
                            
                                         <button type="button" class="boton btn-black text-white"
                                             v-on:click="eliminar(producto.id)">Eliminar</button>

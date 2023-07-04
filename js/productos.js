@@ -4,9 +4,6 @@ createApp({
         return {
             productos: [],
             //url:'http://localhost:5000/productos',
-            // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-            // url: 'http://promero.pythonanywhere.com/productos/', // si ya lo subieron a pythonanywhere
-            // url: 'http://localhost:5000/productos',
             url: 'https://daiw77.pythonanywhere.com/productos', /*si no funciona ponerle la barra final*/
             error: false,
             cargando: true,
@@ -63,6 +60,7 @@ createApp({
                 .then(function () {
                     alert("Registro grabado")
                     window.location.href = "../templates/productos.html";
+                    // window.location.href = "index.html";
                 })
                 .catch(err => {
                     console.error(err);
