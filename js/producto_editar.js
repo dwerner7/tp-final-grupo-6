@@ -25,11 +25,11 @@ createApp({
                     console.log(data)
                     this.id = data.id
                     this.nombre = data.nombre;
-                    this.autor = data.autor
-                    this.editorial = data.editorial
-                    this.precio = data.precio
-                    this.stock = data.stock
-                    this.imagen = data.imagen
+                    this.autor = data.autor;
+                    this.editorial = data.editorial;
+                    this.precio = data.precio;
+                    this.stock = data.stock;
+                    this.imagen = data.imagen;
                 })
                 .catch(err => {
                     console.error(err);
