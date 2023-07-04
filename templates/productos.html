@@ -32,7 +32,8 @@
                 </section>
                 <section v-else>
                     <div class="table-responsive">
-                        <table class="table table-dark table-striped table-hover table-bordered"> 
+                        <table class="table caption-bottom align-middle table-dark table-striped table-hover table-bordered border-purple"> 
+                            <!-- <caption>Lista de libros</caption> -->
                             <thead>
                                 <tr class="light-purple-text">
                                     <th scope="col">Id</th>
@@ -54,17 +55,17 @@
                                     <td>{{producto.precio}}</td>
                                     <td>{{producto.stock}}</td>
                                     <td>
-                                        <img :src="producto.imagen" :alt="producto.nombre">
+                                        <img class="img-table" :src="producto.imagen" :alt="producto.nombre">
                                     </td>
                                     <td>
                            
-                                        <a class="boton btn-dark-purple text-white"
+                                        <a class="boton btn-block btn-dark-purple text-white"
                                             :href="'./producto_update.html?id='+ producto.id">Editar</a>
 
                                             <!-- <a class="boton btn-dark-purple text-white"
                                             :href="'./producto_update.html?id='+ producto.id">Editar</a> -->
                            
-                                        <button type="button" class="boton btn-black text-white"
+                                        <button type="button" class="boton btn-block btn-black text-white"
                                             v-on:click="eliminar(producto.id)">Eliminar</button>
                                         
                                     </td>
@@ -73,6 +74,103 @@
                             </tbody>
                         </table>
                     </div>
+
+                   
+
+                    <div class="book-container" >
+                        <!-- <div class="row row-cols-3 row-cols-md-2 g-4 book-container" v-for="producto in productos"> -->
+                        <!-- <div class="col"> -->
+                          <div class="card bg-dark book-card" v-for="producto in productos">
+                            <img :src="producto.imagen" class="card-img-top img-card" :alt="producto.nombre">
+                            <div class="card-body">
+                              <h5 class="card-title">{{producto.nombre}}</h5>
+                              <p class="card-text">{{producto.autor}}</p>
+
+                            <div class="button-group">
+                                <a class="boton btn-block btn-dark-purple text-white"
+                                            :href="'./producto_update.html?id='+ producto.id">Editar</a>
+
+                                            <!-- <a class="boton btn-dark-purple text-white"
+                                            :href="'./producto_update.html?id='+ producto.id">Editar</a> -->
+                           
+                                            
+                                            <button type="button" class="boton btn-block btn-black text-white"
+                                            v-on:click="eliminar(producto.id)">Eliminar</button>
+                                        </div>
+                                        <div>
+                                        <a class="boton btn-info text-white"
+                                        :href="'./producto_info.html?id='+ producto.id">Info</a>
+                                    </div>
+
+                            </div>
+                          </div>
+                        <!-- </div> -->
+                    </div>
+
+
+
+                    <!-- <div v-for="producto in productos" class="card-group flex">
+                        <div class="card mb-3 bg-dark" style="max-width: 400px; height: 150px;" >
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img :src="producto.imagen" class="img-card  rounded-start" :alt="producto.nombre">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{producto.nombre}}</h5>
+                                        <p class="card-text">{{producto.autor}}</p>
+                                        
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" :data-bs-target="'#'+producto.id" aria-expanded="false" aria-controls="collapseExample">
+                                            Ver más
+                                          </button>
+                                          <div class="collapse" :id="producto.id">
+                                            <div class="card card-body">
+                                              <p>Editorial: {{producto.editorial}}</p>
+                                              <p>${{producto.precio}}</p>
+                                              <p>{{producto.stock}} unidades disponibles</p>
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="row row-cols-1 row-cols-md-3 g-4" v-for="producto in productos">
+                        <div class="col">
+                          <div class="card">
+                            <img :src="producto.imagen"  :alt="producto.nombre">
+                            <div class="card-body">
+                              <h5 class="card-title">{{producto.nombre}}</h5>
+                              <p class="card-text">{{producto.autor}}</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="container" v-for="producto in productos">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" :href="'#'+producto.id" role="button" aria-expanded="false" :aria-controls="producto.id" data-bs-custom-class="beautifier">
+                        {{producto.nombre}}
+                      </a>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" :data-bs-target="'#'+producto.id" aria-expanded="false" aria-controls="collapseExample">
+                        Button with data-bs-target
+                      </button>
+                      <div class="collapse" :id="producto.id">
+                        <div class="card card-body">
+                          <p>{{producto.autor}}</p>
+                          <p>Editorial: {{producto.editorial}}</p>
+                          <p>${{producto.precio}}</p>
+                          <p>{{producto.stock}} unidades disponibles</p>
+                          <img :src="producto.imagen" :alt="producto.nombre">
+                          
+                        </div>
+                      </div>
+
+                      <br><br>
+                    </div> -->
+
                 </section>
             </div>
         </div>

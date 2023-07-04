@@ -12,6 +12,7 @@ body{
 nav{
     background-color: #a393eb; 
     font-weight:bold;
+    margin-bottom: 15px;
 }
 
 form{
@@ -24,6 +25,8 @@ form{
     align-items: center;
 
 }
+
+
 
 input{
     border: solid 2px black;
@@ -50,6 +53,10 @@ label{
 
 .btn-cancelar{
     margin-left: 170px;
+}
+
+.btn-volver{
+    justify-content: end;
 }
 
 .portada-libro{
@@ -94,19 +101,15 @@ label{
     text-decoration: none;
 }
 
-/* .purple-border{
-    border: #a393eb solid 1px;
-} */
-
-img{
+.img-table{
     width:100px;
 }
 
-.home{
+.center{
     display: flex;
     justify-content: center;
     align-content: center;
-
+    margin-left: 25%;
 }
 
 .btn-ingresar{
@@ -120,82 +123,76 @@ img{
     
 }
 
+.border-purple{
+    border:#a393eb solid 2px;
+}
 
+.btn-info{
+    background-color: #8772e4;
+    display: block;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+/******************/
+
+/* .info-img{
+    height: 300px;
+
+}
+
+.info-cards{
+    
+    max-width: 500px;
+    
+}
+
+.flex{
+    display: flex;
+} */
 /***********************CARDS***************************/
+.img-card{
+    height: 250px;
+    width: 180px;
+}
 
-.container-libros{
+.book-card{
+    width: 180px;
+
+}
+
+.button-group{
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    
+}
+.book-container{
     display: grid;
     grid-template-columns: repeat(2,1fr) ;
-    padding: 20px;
+    padding: 10px;
     row-gap: 10px;
-    
 }
-.libro {
-    line-height: 25px;
-    /* background-color: white; */
-    background-color: rgb(39, 39, 44);
-    width: 180px;
-    /* min-height: 400px;
-    max-height: 600px; */
-    color: white;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    padding: 24px;
-    margin: 8px;
-    border-radius: 4px;
-    border: #a393eb solid 2px;
-    transition: background-color .5s; 
-
-    animation: librosGrow 1.5s;
-}
-
-
-.libro:hover {
-    background-color: #312a53;
-    
-    border: rgb(39, 39, 44) solid 2px;
-    transform: scale(110%,110%);
-    
-}
-
-
-
-.autor-libro{
-    /* color: darkslateblue; */
-    color: #a393eb;
-    
-}
-
-.info-padding{
-    padding: 5px 5px 0 5px;
-}
-
-.libro img {
-    align-self: center;
-    width: 128px;
-    height: 200px;
-    border-radius: 4px;
-}
-
 
 
 /*BREAKPOINTS*/
 
 
 @media(min-width:600px) {
-    .container-libros{
+    .book-container{
         grid-template-columns: repeat(3,1fr);
     }
 }
 
 @media(min-width:900px) {
-    .container-libros{
+    .book-container{
         grid-template-columns: repeat(4,1fr);
     }
 }
 
  @media(min-width:1200px) {
-    .container-libros{
+    .book-container{
         grid-template-columns: repeat(5,1fr);
     }
 } 
