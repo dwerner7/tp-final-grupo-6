@@ -18,7 +18,7 @@
     <main>
         <div id="app" class="container">
             <br>
-            <h1>Libros</h1>
+            <h1>Book Shop</h1>
             <br>
             <a class="boton btn-dark-purple text-white" href="../templates/producto_nuevo.html">Nuevo</a>
             <!-- <a class="boton btn-dark-purple text-white" href="producto_nuevo.html">Nuevo</a> -->
@@ -95,48 +95,54 @@
                                             :href="'./producto_update.html?id='+ producto.id">Editar</a> -->
                            
                                             
-                                            <button type="button" class="boton btn-block btn-black text-white"
+                                <button type="button" class="boton btn-block btn-black text-white"
                                             v-on:click="eliminar(producto.id)">Eliminar</button>
+                            </div>
+                            <div>
+                                <a class="boton btn-info text-white" :href="'./producto_info.html?id='+ producto.id">Info</a>
+                            </div>
+
+                        <!-- modal -->
+                        <!-- <div v-for="producto in productos"> -->
+                            <!-- Button trigger modal -->
+                                <button type="button" class="boton btn-info text-white" data-bs-toggle="modal" :data-bs-target="'#libro'+producto.id" >
+                                    Info (modal)
+                                </button>
+                                
+                                <!-- Modal información -->
+                                        <div class="modal fade black-text modal-info" :id="'libro'+producto.id" tabindex="-1" :aria-labelledby="'#l'+producto.id + 'ModalLabel'" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-light-purple bold black-border">
+                                                <h1 class="modal-title fs-5" :id="'l'+producto.id + 'ModalLabel'">{{producto.nombre}}</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body bg-dark text-white modal-data">
+                                                   <div>
+                                                        <p>{{producto.autor}}</p>
+                                                        <p>Editorial {{producto.editorial}}</p>
+                                                        <p>${{producto.precio}}</p>
+                                                        <p>{{producto.stock}} unidades disponibles</p>
+                                                    </div>
+                                                    <img class="img-modal-info" :src="producto.imagen" :alt="producto.nombre">
+                                                </div>
+                                                <div class="modal-footer bg-dark black-border">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                                </div>
+                                            </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                        <a class="boton btn-info text-white"
-                                        :href="'./producto_info.html?id='+ producto.id">Info</a>
-                                    </div>
+                                    <!-- </div> -->
+
+                        <!-- modal -->
 
                             </div>
                           </div>
                     </div>
                 
 
-                    <div v-for="producto in productos">
-                    <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" :data-bs-target="'#libro'+producto.id" >
-                            Ver más
-                        </button>
-                        
-                        <!-- Modal -->
-                                <div class="modal fade" style="color: black;" :id="'libro'+producto.id" tabindex="-1" :aria-labelledby="'#l'+producto.id + 'ModalLabel'" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h1 class="modal-title fs-5" :id="'l'+producto.id + 'ModalLabel'">{{producto.nombre}}</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>{{producto.autor}}</p>
-                                            <p>Editorial {{producto.editorial}}</p>
-                                            <p>${{producto.precio}}</p>
-                                            <p>{{producto.stock}} unidades disponibles</p>
-                                            <img style="width: 250px;" :src="producto.imagen" :alt="producto.nombre">
-                                        </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
+                   
 
                 </section>
             </div>

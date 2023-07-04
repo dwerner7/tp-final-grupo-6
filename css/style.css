@@ -135,6 +135,34 @@ label{
     
 }
 
+.bg-light-purple{
+    background-color: #a393eb;
+    
+}
+
+.black-border{
+    border: black solid 1px;
+}
+
+.black-text{
+    color: black;
+}
+
+.img-modal-info{
+    width: 200px;
+}
+
+.modal-info{
+    /* max-width: 400px; */
+    display: flex;
+    justify-content: center;
+}
+
+.modal-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /******************/
 
 /* .info-img{
