@@ -26,23 +26,23 @@
                 </div>
                 <div class="mb-3">
                     <label for="nombre">Título: </label>
-                    <input class="margin-left-10 border-radius-10" type="text" name="nombre" id="nombre" v-model="nombre">
+                    <input class="margin-left-10 border-radius-10" type="text" name="nombre" id="nombre" v-model="nombre" required>
                 </div>
                 <div class="mb-3">
                     <label for="autor">Autor:</label>
-                    <input class="margin-left-10 border-radius-10" type="text" name="autor" id="autor" v-model="autor">
+                    <input class="margin-left-10 border-radius-10" type="text" name="autor" id="autor" v-model="autor" required>
                 </div>
                 <div class="mb-3">
                     <label for="editorial">Editorial:</label>
-                    <input class="margin-left-10 border-radius-10" type="text" name="editorial" id="editorial" v-model="editorial">
+                    <input class="margin-left-10 border-radius-10" type="text" name="editorial" id="editorial" v-model="editorial" required>
                 </div>
                 <div class="mb-3">
                     <label for="precio">Precio:</label>
-                    <input class="margin-left-10 border-radius-10" type="number" name="precio" id="precio" v-model="precio">
+                    <input class="margin-left-10 border-radius-10" type="number" name="precio" id="precio" v-model="precio" required>
                 </div>
                 <div class="mb-3">
                     <label for="stock">Stock:</label>
-                    <input class="margin-left-10 border-radius-10" type="number" name="stock" id="stock" v-model="stock">
+                    <input class="margin-left-10 border-radius-10" type="number" name="stock" id="stock" v-model="stock" required>
                 </div>
                 <div class="mb-3">
                     <label for="imagen">Portada: </label>
@@ -73,6 +73,7 @@
     <script src="../js/main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../js/producto_editar.js"></script>
+    
 </body>
 
 </html>
