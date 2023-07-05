@@ -103,7 +103,9 @@ label{
 
 .img-table{
     width:100px;
-}
+    /* transition:transform 0.25s ease; */
+} 
+
 
 .center{
     display: flex;
@@ -163,84 +165,18 @@ label{
 }
 
 .grey-text{
-    color: grey;
+    color: grey
 }
 
 
-/********************************/
-.img-modal-info{
-    width: 200px;
+.btn-img{
+    border: none;    
 }
 
-.modal-info{
-    /* max-width: 400px; */
-    display: flex;
-    justify-content: center;
+.img-table-enlarged{
+    width: 225px;
 }
 
-.modal-data{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.modal-img{
+    max-width: 260px;
 }
-/******************/
-
-/* .info-img{
-    height: 300px;
-
-}
-
-.info-cards{
-    
-    max-width: 500px;
-    
-}
-
-.flex{
-    display: flex;
-} */
-/***********************CARDS***************************/
-.img-card{
-    height: 250px;
-    width: 180px;
-}
-
-.book-card{
-    width: 180px;
-
-}
-
-.button-group{
-    position: relative;
-    display: inline-flex;
-    vertical-align: middle;
-    
-}
-.book-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr) ;
-    padding: 10px;
-    row-gap: 10px;
-}
-
-
-/*BREAKPOINTS*/
-
-
-@media(min-width:600px) {
-    .book-container{
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-
-@media(min-width:900px) {
-    .book-container{
-        grid-template-columns: repeat(4,1fr);
-    }
-}
-
- @media(min-width:1200px) {
-    .book-container{
-        grid-template-columns: repeat(5,1fr);
-    }
-} 

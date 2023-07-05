@@ -56,7 +56,27 @@
                                     <td>{{producto.precio}}</td>
                                     <td>{{producto.stock}}</td>
                                     <td>
-                                        <img class="img-table" :src="producto.imagen" :alt="producto.nombre">
+                                        <button type="button" class="btn-img bg-dark text-white" data-bs-toggle="modal" :data-bs-target="'#img'+producto.id">
+                                            <img class="img-table" :src="producto.imagen" :alt="producto.nombre">
+                                          </button>
+                                            <!-- <img :src="producto.imagen" :alt="producto.nombre"> -->
+                                            <div class="modal fade" :id="'img'+producto.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content bg-dark modal-img">
+                                                    <!-- <div class="modal-header bg-dark">
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div> -->
+                                                    <div class="modal-body">
+                                                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                                        <img class="img-table-enlarged" :src="producto.imagen" :alt="producto.nombre">
+                                                    </div>
+                                                    <!-- <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div> -->
+                                                  </div>
+                                                </div>
+                                              </div>
                                     </td>
                                     <td>
                            
@@ -84,6 +104,7 @@
     <footer>
 
     </footer>
+
     <!--Link de Bootstrap -->    
     <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
