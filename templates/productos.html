@@ -34,7 +34,7 @@
                 <section v-else>
                     <div class="table-responsive">
                         <table class="table caption-bottom align-middle table-dark table-striped table-hover table-bordered border-purple"> 
-                            <!-- <caption>Lista de libros</caption> -->
+                            <caption>Lista de libros de Book Shop</caption>
                             <thead>
                                 <tr class="light-purple-text">
                                     <th scope="col">Id</th>
@@ -63,17 +63,10 @@
                                             <div class="modal fade" :id="'img'+producto.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                   <div class="modal-content bg-dark modal-img">
-                                                    <!-- <div class="modal-header bg-dark">
-                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div> -->
                                                     <div class="modal-body">
                                                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                                                         <img class="img-table-enlarged" :src="producto.imagen" :alt="producto.nombre">
                                                     </div>
-                                                    <!-- <div class="modal-footer">
-                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                      <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div> -->
                                                   </div>
                                                 </div>
                                               </div>

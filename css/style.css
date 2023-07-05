@@ -61,7 +61,6 @@ label{
 
 .portada-libro{
     display: block;
-    /* align-self: center; */
 }
 
 .fondo-negro{
@@ -69,22 +68,16 @@ label{
 }
 
 .btn-dark-purple{
-    /* background-color:darkslateblue; */
     background-color:#312a53;
-    /* color: white; */
     border: #312a53 solid 1px;
 }
 
 .btn-black{
     background-color: black;
-    /* color: white; */
     border: black solid 1px;
     text-decoration: none;
 }
 
-/* thead{
-    background-color: #a393eb;
-} */
 
 .bold{
     font-weight: bold;
@@ -103,7 +96,6 @@ label{
 
 .img-table{
     width:100px;
-    /* transition:transform 0.25s ease; */
 } 
 
 
